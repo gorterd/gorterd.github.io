@@ -68,7 +68,7 @@
 			a {
 				@include vendor('transition', 'color #{_duration(transition)} ease');
 				border: 0;
-				color: _palette(fg-light);
+				color: _palette(fg);
 				display: block;
 				font-size: 0.6em;
 				font-weight: _font(weight-bold);
@@ -92,11 +92,11 @@
 				}
 
 				&:before {
-					background: lighten(_palette(bg), 5);
+					background: _palette(accent3-alt);
 				}
 
 				&:after {
-					@include vendor('background-image', 'linear-gradient(to right, #{_palette(accent1)}, #{_palette(accent3)})');
+					@include vendor('background-image', 'linear-gradient(to right, #{_palette(fg)}, #{_palette(fg-bold)})');
 					@include vendor('transition', 'max-width #{_duration(transition)} ease');
 					max-width: 0;
 				}
